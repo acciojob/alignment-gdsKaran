@@ -1,16 +1,89 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>HTML Assignment 3</title>
+  <style>
+    /* Page */
+    h1 { text-align:center; margin: 6px 0 12px; }
+
+    /* Tables */
+    table.middle{
+      width:98%;
+      margin:16px auto 32px;
+      border:1px solid #000;
+      border-collapse:collapse;       /* crisp single grid lines */
+      table-layout:fixed;             /* equal column widths like your image */
+    }
+    table.middle td{
+      border:1px solid #000;
+      padding:1px;                    /* per requirement */
+      height:26px;                    /* makes rows less “stiff” */
+      vertical-align:middle;
+      word-wrap:break-word;
+    }
+
+    /* Alignments */
+    .center{ text-align:center; }
+    .right{ text-align:right; }
+
+    /* Colored bands in Table 3 */
+    .green td{ background:green; height:32px; }
+    .blue  td{ background:blue;  height:32px; }
+
+    /* Image cell */
+    #t-image img{
+      display:block;
+      margin:0 auto;
+      max-width:100%;
+      width:380px;                    /* closer to your screenshot */
+      height:auto;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <h1>HTML Assignment #3</h1>
 
+  <!-- TABLE 1: 3x3 -->
+  <table id="table-1" class="middle">
+    <tr>
+      <td id="t11">left</td>
+      <td id="t12" class="center">center</td>
+      <td id="t13" class="right">right</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td class="center">center</td>
+      <td class="right">right</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td class="center">center</td>
+      <td class="right">right</td>
+    </tr>
+  </table>
+
+  <!-- TABLE 2: 6x6, first row merged -->
+  <table id="table-2" class="middle">
+    <tr><td id="t21" colspan="6"></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <!-- TABLE 3: bands + image -->
+  <table id="table-3" class="middle">
+    <tr class="green"><td colspan="3"></td></tr>
+    <tr>
+      <td></td>
+      <td id="t-image">
+        <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2013_FallP3/Luthra%20Portfolio/images-1.jpeg" alt="Image" />
+      </td>
+      <td></td>
+    </tr>
+    <tr class="blue"><td colspan="3"></td></tr>
+  </table>
 </body>
-
 </html>
